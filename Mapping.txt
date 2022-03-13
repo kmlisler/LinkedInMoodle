@@ -1,0 +1,76 @@
+DESIGN-LOGICAL MODEL
+Iteration1
+Step1
+Skill(skill_id, name, category)
+Address(address_id, country, city, street)
+Group(group_id, name, description)
+Job_offer(offer_id, job_title, description)
+Office(office_id, name)
+File(file_id, name, privacy)
+Course(course_id, name, code, credit)
+Project(project_id ,title, description)
+Graduate_level(grad_id, name)
+Department(dept_id, name)
+Faculty(faculty_id, name)
+Step2
+-
+Step3
+-
+Step4
+Job_offer(offer_id, job_title, description, address_id, office_id)
+Project(project_id ,title, description, course_id)
+File(file_id, name, privacy, person_id)
+Course(course_id, name, code, credit, dept_id)
+Project(project_id ,title, description, course_id)
+Graduate_level(grad_id, name, dept_id)
+Department(dept_id, name, grad_id, address_id)
+Step 5
+-
+Step 6
+-
+Step 7
+-
+Step 8
+Person(person_id, fname, lname, phone, mail, bday)
+Teacher(teacher_id, branch)
+Student(student_id, gpa, grade)
+Member(member_id, password)
+Organization(org_id, name, phone, mail, type)
+Step 9 
+-
+
+Iteration 2
+Step1
+-
+Step2
+-
+Step 3
+-
+Step 4
+Person(person_id, fname, lname, phone, mail, bday,type, address_id)
+Teacher(teacher_id, branch, dept_id)
+Group(group_id, name, description, member_id)
+Office(office_id, name, address_id, org_id)
+Faculty(faculty_id, name, org_id)
+Step 5
+Educates_in(start_date, end_date, gpa, grad_id, person_id)
+Messages(from_person_id, to_person_id, title, context,date)
+References(teacher_id, referenced_person_id, date, context)
+Knows(person_id, skill_id)
+Teaches(teacher_id, course_id, semester)
+Enrolls(student_id, course_id, semester, grade)
+Works_on(student_id, project_id, grade)
+Recommends(member_id, recommended_person_id, date, context)
+Follows(member_id, org_id)
+Works_for(member_id, start_date, end_date, job_title, office_id)
+Applies(member_id, status, date, address_id, offer_id)
+Joins(member_id, group_id)
+Connects(member_id, connected_member_id)
+Step 6
+-
+Step7
+-
+Step8
+-
+Step9
+-
